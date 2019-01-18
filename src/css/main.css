@@ -1,3 +1,39 @@
+:root {
+  --bgColor: #254571; }
+
+.header, .features, .about, .contact, .footer {
+  display: block;
+  width: 100vw;
+  min-height: 100vh; }
+
+.header, .features, .about, .contact, .footer {
+  display: block;
+  width: 100vw;
+  min-height: 100vh; }
+
+.bg-wrapper {
+  min-height: 500vh;
+  width: 100vw; }
+
+.header {
+  position: relative; }
+  .header .header__img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(1.5);
+    max-width: 110vw;
+    max-height: 80vh; }
+
+.features {
+  background-color: blue; }
+
+.about {
+  background-color: green; }
+
+.contact {
+  background-color: pink; }
+
 html {
   box-sizing: border-box; }
 
@@ -8,9 +44,7 @@ html {
   overflow-x: hidden; }
 
 .bg-wrapper {
-  min-height: 500vh;
-  width: 100vw;
   background: url("../../../dist/images/topBackground.jpg") fixed;
-  background-position: 0 0;
+  background-position: 0 50%;
   background-size: auto 100vh;
   background-repeat: no-repeat; }

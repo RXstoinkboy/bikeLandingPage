@@ -99,7 +99,7 @@
 var _layout = __webpack_require__(/*! ./layout.js */ "./src/js/layout.js");
 
 window.addEventListener('load', function () {
-  window.addEventListener('scroll', _.debounce(_layout.layout, 30));
+  window.addEventListener('scroll', _.debounce(_layout.layout, 20));
 });
 
 /***/ }),
@@ -122,7 +122,7 @@ exports.layout = layout;
 function layout() {
   var background = document.querySelector('.bg-wrapper');
 
-  if (window.scrollY >= window.innerHeight) {
+  if (window.scrollY >= window.innerHeight * 2) {
     background.style.backgroundImage = 'url("../../../dist/images/footerBackground.jpg")';
   } else {
     background.style.backgroundImage = 'url("../../../dist/images/topBackground.jpg")';

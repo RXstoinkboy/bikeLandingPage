@@ -1,0 +1,27 @@
+.header, .features, .about, .contact, .footer {
+  display: block;
+  width: 100vw;
+  min-height: 100vh; }
+
+.bg-wrapper {
+  min-height: 500vh;
+  width: 100vw; }
+
+.header {
+  position: relative; }
+  .header .header__img {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(1.5);
+    max-width: 110vw;
+    max-height: 80vh; }
+
+.features {
+  background-color: blue; }
+
+.about {
+  background-color: green; }
+
+.contact {
+  background-color: pink; }

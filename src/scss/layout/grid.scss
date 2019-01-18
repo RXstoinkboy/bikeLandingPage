@@ -1,0 +1,39 @@
+@import '../partials/mixins.scss';
+
+.bg-wrapper{
+    min-height: 500vh;
+    width: 100vw;
+}
+
+.header {
+    @extend %section;
+    position: relative;
+
+    .header__img{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%) scale(1.5);
+        max-width: 110vw;
+        max-height: 80vh;
+    }
+}
+
+.features{
+    @extend %section;
+    background-color: blue;
+}
+
+.about{
+    @extend %section;
+    background-color: green;
+}
+
+.contact{
+    @extend %section;
+    background-color: pink;
+}
+
+.footer{
+    @extend %section;
+}

@@ -8,9 +8,7 @@ html {
   overflow-x: hidden; }
 
 .bg-wrapper {
-  min-height: 500vh;
-  width: 100vw;
   background: url("../../../dist/images/topBackground.jpg") fixed;
-  background-position: 0 0;
+  background-position: 0 50%;
   background-size: auto 100vh;
   background-repeat: no-repeat; }
