@@ -1,5 +1,5 @@
-# devConfig
-My configuration file for website development purposes
+# Bike Landing Page
+It is a landing page for selling a bike. Website is prepared for FCC RWD certification. I am making using mostly SASS and vanilla JS. 
 
 ## Usage
 These are instructions needed for you in order to download this repo and run it on your local machine.
@@ -11,7 +11,7 @@ In order to run this repository and modify it you need [**NodeJS**][1] and **npm
 
 1. Clone the repo to your local environment:
     ```
-    https://github.com/RXstoinkboy/devConfiguration.git
+    git clone https://github.com/RXstoinkboy/devConfiguration.git
     ```
 
 1. Install all dependencies used for building this project:

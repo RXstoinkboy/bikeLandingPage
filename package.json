@@ -1,7 +1,7 @@
 {
-  "name": "devconfig",
-  "version": "1.2.0",
-  "description": "configuration file to automate dev process using npm scripts and webpack",
+  "name": "Bike Landing Page",
+  "version": "0.1.0",
+  "description": "A bike landing page prepared for FCC certification and for portfolio  ",
   "main": "./src/js/index.js",
   "scripts": {
     "sass:dist": "node-sass  -o src/css src/scss",
@@ -24,7 +24,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/RXstoinkboy/devConfiguration.git"
+    "url": "git+https://github.com/RXstoinkboy/bikeLandingPage.git"
   },
   "keywords": [
     "webpack",
@@ -32,14 +32,15 @@
     "scripts",
     "js",
     "javascript",
-    "rxstoinkboy"
+    "rxstoinkboy",
+    "landing page"
   ],
   "author": "RXstoinkboy",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/RXstoinkboy/devConfiguration/issues"
+    "url": "https://github.com/RXstoinkboy/bikeLandingPage/issues"
   },
-  "homepage": "https://github.com/RXstoinkboy/devConfiguration#readme",
+  "homepage": "https://github.com/RXstoinkboy/bikeLandingPage#readme",
   "devDependencies": {
     "@babel/core": "^7.2.2",
     "autoprefixer": "^9.4.2",
