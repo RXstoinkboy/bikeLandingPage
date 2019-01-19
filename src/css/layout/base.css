@@ -5,22 +5,17 @@ html {
   box-sizing: inherit;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  font-family: 'Lato', sans-serif; }
 
-.backgroundCont1 {
-  width: 100vw;
-  height: 100vh;
+.header {
   background: url("../../../dist/images/topBg2_light.jpg") fixed;
-  background-position: 50% 0;
-  background-size: auto 100vh;
+  background-position: center;
   background-repeat: no-repeat;
-  display: block; }
+  background-size: cover; }
 
-.backgroundCont2 {
-  width: 100vw;
-  height: 100vh;
+.contact {
   background: url("../../../dist/images/bottomBg2_light.jpg") fixed;
-  background-position: 50% 0;
-  background-size: auto 100vh;
+  background-position: center;
   background-repeat: no-repeat;
-  display: block; }
+  background-size: cover; }

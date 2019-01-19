@@ -1,0 +1,7 @@
+.bikeAnim {
+  height: 100%;
+  width: 200px;
+  position: absolute;
+  top: 0;
+  left: 5%;
+  background: red; }
