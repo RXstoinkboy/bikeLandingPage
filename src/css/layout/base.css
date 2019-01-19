@@ -7,8 +7,20 @@ html {
   padding: 0;
   overflow-x: hidden; }
 
-.bg-wrapper {
-  background: url("../../../dist/images/topBackground.jpg") fixed;
-  background-position: 0 50%;
+.backgroundCont1 {
+  width: 100vw;
+  height: 100vh;
+  background: url("../../../dist/images/topBg2_light.jpg") fixed;
+  background-position: 50% 0;
   background-size: auto 100vh;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  display: block; }
+
+.backgroundCont2 {
+  width: 100vw;
+  height: 100vh;
+  background: url("../../../dist/images/bottomBg2_light.jpg") fixed;
+  background-position: 50% 0;
+  background-size: auto 100vh;
+  background-repeat: no-repeat;
+  display: block; }

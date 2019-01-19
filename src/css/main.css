@@ -1,12 +1,12 @@
 :root {
   --bgColor: #254571; }
 
-.header, .features, .about, .contact, .footer {
+.backgroundCont2 .footer, .header, .features, .about, .contact {
   display: block;
   width: 100vw;
   min-height: 100vh; }
 
-.header, .features, .about, .contact, .footer {
+.backgroundCont2 .footer, .header, .features, .about, .contact {
   display: block;
   width: 100vw;
   min-height: 100vh; }
@@ -15,15 +15,23 @@
   min-height: 500vh;
   width: 100vw; }
 
+.backgroundCont1 {
+  position: relative; }
+
+.backgroundCont2 {
+  position: relative; }
+  .backgroundCont2 .footer {
+    position: absolute; }
+
 .header {
   position: relative; }
   .header .header__img {
     position: absolute;
     bottom: 0;
     left: 50%;
-    transform: translateX(-50%) scale(1.5);
-    max-width: 110vw;
-    max-height: 80vh; }
+    transform: translateX(-50%);
+    width: 70vw;
+    max-height: 70vh; }
 
 .features {
   background-color: blue; }
@@ -43,8 +51,20 @@ html {
   padding: 0;
   overflow-x: hidden; }
 
-.bg-wrapper {
-  background: url("../../../dist/images/topBackground.jpg") fixed;
-  background-position: 0 50%;
+.backgroundCont1 {
+  width: 100vw;
+  height: 100vh;
+  background: url("../../../dist/images/topBg2_light.jpg") fixed;
+  background-position: 50% 0;
   background-size: auto 100vh;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+  display: block; }
+
+.backgroundCont2 {
+  width: 100vw;
+  height: 100vh;
+  background: url("../../../dist/images/bottomBg2_light.jpg") fixed;
+  background-position: 50% 0;
+  background-size: auto 100vh;
+  background-repeat: no-repeat;
+  display: block; }

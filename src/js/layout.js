@@ -1,8 +1,9 @@
 export function layout() {
-  const background = document.querySelector('.bg-wrapper');
-  if (window.scrollY >= (window.innerHeight) * 2) {
-    background.style.backgroundImage = 'url("../../../dist/images/footerBackground.jpg")';
+  const background1 = document.querySelector('.backgroundCont1');
+  const background2 = document.querySelector('.backgroundCont2');
+  if (window.scrollY >= (window.innerHeight) * 1.5) {
+    background1.style.display = 'none';
   } else {
-    background.style.backgroundImage = 'url("../../../dist/images/topBackground.jpg")';
+    background1.style.display = 'block';
   }
 }

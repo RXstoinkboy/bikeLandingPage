@@ -120,12 +120,13 @@ Object.defineProperty(exports, "__esModule", {
 exports.layout = layout;
 
 function layout() {
-  var background = document.querySelector('.bg-wrapper');
+  var background1 = document.querySelector('.backgroundCont1');
+  var background2 = document.querySelector('.backgroundCont2');
 
-  if (window.scrollY >= window.innerHeight * 2) {
-    background.style.backgroundImage = 'url("../../../dist/images/footerBackground.jpg")';
+  if (window.scrollY >= window.innerHeight * 1.5) {
+    background1.style.display = 'none';
   } else {
-    background.style.backgroundImage = 'url("../../../dist/images/topBackground.jpg")';
+    background1.style.display = 'block';
   }
 }
 

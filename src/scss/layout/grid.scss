@@ -5,6 +5,19 @@
     width: 100vw;
 }
 
+.backgroundCont1{
+    position: relative;
+}
+
+.backgroundCont2{
+    position: relative;
+
+    .footer{
+        @extend %section;
+        position: absolute;
+    }
+}
+
 .header {
     @extend %section;
     position: relative;
@@ -13,9 +26,9 @@
         position: absolute;
         bottom: 0;
         left: 50%;
-        transform: translateX(-50%) scale(1.5);
-        max-width: 110vw;
-        max-height: 80vh;
+        transform: translateX(-50%);
+        width: 70vw;
+        max-height: 70vh;
     }
 }
 
@@ -34,6 +47,3 @@
     background-color: pink;
 }
 
-.footer{
-    @extend %section;
-}
