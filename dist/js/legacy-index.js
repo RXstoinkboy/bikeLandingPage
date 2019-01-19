@@ -96,18 +96,19 @@
 "use strict";
 
 
-var _layout = __webpack_require__(/*! ./layout.js */ "./src/js/layout.js");
+var _navButton = __webpack_require__(/*! ./navButton.js */ "./src/js/navButton.js");
 
-window.addEventListener('load', function () {
-  window.addEventListener('scroll', _.debounce(_layout.layout, 20));
+window.addEventListener('DOMContentLoaded', function () {
+  var navButton = document.querySelector('.navButton');
+  navButton.addEventListener('click', _navButton.toggleMenu);
 });
 
 /***/ }),
 
-/***/ "./src/js/layout.js":
-/*!**************************!*\
-  !*** ./src/js/layout.js ***!
-  \**************************/
+/***/ "./src/js/navButton.js":
+/*!*****************************!*\
+  !*** ./src/js/navButton.js ***!
+  \*****************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -117,17 +118,13 @@ window.addEventListener('load', function () {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.layout = layout;
+exports.toggleMenu = toggleMenu;
 
-function layout() {
-  var background1 = document.querySelector('.backgroundCont1');
-  var background2 = document.querySelector('.backgroundCont2');
-
-  if (window.scrollY >= window.innerHeight * 1.5) {
-    background1.style.display = 'none';
-  } else {
-    background1.style.display = 'block';
-  }
+function toggleMenu() {
+  var navButton = document.querySelector('.navButton');
+  var nav = document.querySelector('.nav');
+  navButton.classList.toggle('navButton--active');
+  nav.classList.toggle('nav--active');
 }
 
 /***/ })

@@ -1,6 +1,7 @@
-import { layout } from './layout.js';
+import { toggleMenu } from './navButton.js';
 
-window.addEventListener('load', () => {
-  window.addEventListener('scroll', _.debounce(layout, 20));
+window.addEventListener('DOMContentLoaded', () => {
+  const navButton = document.querySelector('.navButton');
+
+  navButton.addEventListener('click', toggleMenu);
 });
-
