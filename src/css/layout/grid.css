@@ -1,10 +1,10 @@
 .main {
   transform: translate3d(0, 0, 0);
   will-change: transform, filter;
-  width: 100%;
+  width: 120%;
   height: 100%;
   background: transparent;
-  transition: all .2s ease-out; }
+  transition: all .15s ease-out .07s; }
 
 .header {
   position: relative;
