@@ -9,35 +9,42 @@
     <link rel="stylesheet" href="./dist/css/main.css">
 </head>
 <body>
-    <header class="header" id="header">
-        <div class="bikeAnim">wrum!!</div>
-        <button class="navButton">
-            <div class="navButton__top"></div>
-            <div class="navButton__mid"></div>
-            <div class="navButton__bot"></div>
-        </button>
-        
+    <button class="navButton">
+        <div class="navButton__top"></div>
+        <div class="navButton__mid"></div>
+        <div class="navButton__bot"></div>
+    </button>
+    <header  id="header">
         <nav class="nav" id="nav-bar">    
             <a href="#" class="nav-link">Home<span></span></a>
             <a href="#" class="nav-link">Features<span></span></a>
             <a href="#" class="nav-link">About item<span></span></a>
             <a href="#" class="nav-link">Contact<span></span></a>
         </nav>
-        <h1 class="header__hello">Nice bike, <span>huh?!</span></h1>
-        <img class="header__heroImg" src="dist/images/heroBike.png" alt="a bike picture" id="header-img">
+
+        <div class="nav__hideNav"></div>
+        
     </header>
 
-    <section class="features">
-        <div class="content">Some text 1</div>
-    </section>
+    <div class="main">
+        <div class="header">            
+                <div class="bikeAnim">wrum!!</div>
+                <h1 class="header__hello">Nice bike, <span>huh?!</span></h1>
+                <img class="header__heroImg" src="dist/images/heroBike.png" alt="a bike picture" id="header-img">
+            </div>
+                <section class="features">
+            <div class="content">Some text 1</div>
+        </section>
 
-    <section class="aboutItem">
-        <div class="aboutItemCnt">Some text 2</div>
-    </section>
+        <section class="aboutItem">
+            <div class="aboutItemCnt">Some text 2</div>
+        </section>
 
-    <section class="contact">
-        <div class="formCnt">Some text 3</div>
-    </section>
+        <section class="contact">
+            <div class="formCnt">Some text 3</div>
+        </section>
+        
+    </div>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>

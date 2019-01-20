@@ -100,7 +100,9 @@ var _navButton = __webpack_require__(/*! ./navButton.js */ "./src/js/navButton.j
 
 window.addEventListener('DOMContentLoaded', function () {
   var navButton = document.querySelector('.navButton');
+  var hideNav = document.querySelector('.nav__hideNav');
   navButton.addEventListener('click', _navButton.toggleMenu);
+  hideNav.addEventListener('click', _navButton.toggleMenu);
 });
 
 /***/ }),
