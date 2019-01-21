@@ -123,35 +123,35 @@ html {
   .navButton:hover {
     cursor: pointer; }
 
-.navButton.navButton--active .navButton__top {
-  transform: translate(-10px, -19px) rotate(-45deg);
-  width: 70%; }
-
-.navButton.navButton--active .navButton__bot {
-  transform: translate(-10px, 19px) rotate(45deg);
-  width: 70%; }
-
 .nav {
-  z-index: 32;
   position: fixed;
-  transform: skew(0deg) translate3d(-100%, 0, 0);
   top: 0;
-  left: -30%;
+  left: 0;
   height: 100vh;
-  width: 90vw;
-  background: var(--secondaryTextColor);
-  transition: all 0.4s ease;
+  z-index: 32;
   display: flex;
+  flex-flow: column nowrap;
   justify-content: center;
-  align-items: baseline;
-  flex-flow: column nowrap; }
-
-.nav--active {
-  transform: skew(13deg) translate3d(0, 0, 0); }
-
-.navButton.navButton--active ~ .main {
-  transform: translate3d(7%, 0, 0);
-  filter: blur(3px) saturate(0.1); }
+  align-items: flex-start;
+  transform: translate3d(-100%, 0, 0);
+  /* material acceleration */
+  will-change: transform;
+  transition: transform .5s ease;
+  overflow: visible; }
+  .nav::before {
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 32;
+    width: 60vw;
+    background: var(--secondaryTextColor);
+    content: '';
+    transform: skewX(0) translate3d(-100%, 0, 0);
+    transform-origin: bottom left;
+    will-change: transform;
+    transition: transform .5s ease; }
 
 .nav__hideNav {
   z-index: 30;
@@ -162,17 +162,50 @@ html {
   background: transparent;
   cursor: pointer; }
 
-.navButton.navButton--active + #header .nav__hideNav {
-  display: block; }
-
 .nav-link {
-  transform: skew(-13deg) translate3d(200%, 0, 0);
+  margin: .5em 0;
+  padding: .2em 0 .2em 2em;
+  text-decoration: none;
+  transform: translateX(-100%);
   text-align: left;
   top: 50%;
   left: 30%;
   z-index: 34;
-  color: #FFF;
-  font-size: 3em; }
+  color: white;
+  font-size: 3em;
+  transition: transform .3s ease, color .3s ease; }
+  .nav-link:nth-child(1) {
+    transition-delay: 0.14s, 0s; }
+  .nav-link:nth-child(2) {
+    transition-delay: 0.21s, 0s; }
+  .nav-link:nth-child(3) {
+    transition-delay: 0.28s, 0s; }
+  .nav-link:nth-child(4) {
+    transition-delay: 0.35s, 0s; }
+  .nav-link:hover {
+    color: var(--mainTextColor); }
+
+.navButton.navButton--active .navButton__top {
+  transform: translate(-10px, -19px) rotate(-45deg);
+  width: 70%; }
+
+.navButton.navButton--active .navButton__bot {
+  transform: translate(-10px, 19px) rotate(45deg);
+  width: 70%; }
+
+.navButton.navButton--active ~ #header .nav {
+  transform: translate3d(0, 0, 0); }
+  .navButton.navButton--active ~ #header .nav::before {
+    transform: skew(13deg) translate3d(0, 0, 0); }
+  .navButton.navButton--active ~ #header .nav > .nav-link {
+    transform: translateX(0); }
+
+.navButton.navButton--active ~ #header ~ .main {
+  transform: translate3d(7%, 0, 0);
+  filter: blur(3px) saturate(0.1); }
+
+.navButton.navButton--active ~ #header .nav__hideNav {
+  display: block; }
 
 .bikeAnim {
   height: 100px;

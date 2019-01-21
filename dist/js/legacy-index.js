@@ -125,8 +125,7 @@ exports.toggleMenu = toggleMenu;
 function toggleMenu() {
   var navButton = document.querySelector('.navButton');
   var nav = document.querySelector('.nav');
-  navButton.classList.toggle('navButton--active');
-  nav.classList.toggle('nav--active');
+  navButton.classList.toggle('navButton--active'); // nav.classList.toggle('nav--active');
 }
 
 /***/ })

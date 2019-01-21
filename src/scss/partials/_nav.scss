@@ -1,0 +1,142 @@
+// nav button styling
+.navButton{
+    z-index: 33;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    height: 80px;
+    width: 80px;
+    background: transparent;
+    border: none;
+    overflow: hidden;
+
+    .navButton__top, .navButton__mid, .navButton__bot{
+        position: absolute;
+        width: 100%;
+        height: 8px;
+        background: black;
+        border-radius: 4px;
+        top: 36px;
+        transform: translate(0, 0) rotate(0);
+    }
+
+    .navButton__top{
+        transform: translate(0, -30px) rotate(0);
+        transition: all .3s ease;
+    }
+
+    .navButton__bot{
+        transform: translate(0, 30px) rotate(0);
+        transition: all .3s ease;
+    }
+
+    &:hover{
+        cursor: pointer;
+    }
+}
+
+// navigation body styling
+.nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	z-index: 32;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: flex-start;
+	transform: translate3d(-100%,0,0); /* material acceleration */
+	will-change: transform;
+    transition: transform .5s ease;
+    overflow: visible;
+
+	&::before {
+        display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0; 
+		z-index: 32;
+		width: 60vw;
+		background: var(--secondaryTextColor);
+		content: '';
+		transform: skewX(0) translate3d(-100%,0,0);
+		transform-origin: bottom left;
+		will-change: transform;
+		transition: transform .5s ease;
+    }
+}
+
+// element to hide nav when you click outside of navigation body
+.nav__hideNav{
+    z-index: 30;
+    position: fixed;
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background: transparent;
+    cursor: pointer;
+}
+// navigation elements
+
+.nav-link{
+    margin: .5em 0;
+    padding: .2em 0 .2em 2em;
+    text-decoration: none;
+    transform: translateX(-100%);
+    text-align: left;
+    top: 50%;
+    left: 30%;
+    z-index: 34;
+    color: white;
+    font-size: 3em;
+    transition: transform .3s ease, color .3s ease;
+
+    @for $i from 1 through 4 {
+        &:nth-child(#{$i}) {
+            transition-delay: #{.07 + ($i * .07)}s, 0s;
+        }
+    }
+
+    &:hover{
+        color: var(--mainTextColor);
+    }
+}
+
+
+// transition effects
+.navButton.navButton--active{
+    .navButton__top{
+        transform: translate(-10px, -19px) rotate(-45deg);
+        width: 70%;
+    }
+
+    .navButton__bot{
+        transform: translate(-10px, 19px) rotate(45deg);
+        width: 70%;
+    }
+
+    & ~ #header {
+        .nav{
+            transform: translate3d(0,0,0);
+
+            &::before{
+                transform: skew(13deg) translate3d(0, 0, 0);
+            }
+
+            & > .nav-link{
+                transform: translateX(0);
+            }        
+        }
+
+        & ~ .main{
+            transform: translate3d(7%, 0,0);
+            filter: blur(3px) saturate(.1);
+        }
+
+        .nav__hideNav{
+            display: block;
+        }
+    }
+}
