@@ -132,7 +132,7 @@
 
         & ~ .main{
             transform: translate3d(7%, 0,0);
-            filter: blur(3px) saturate(.1);
+            filter: blur(3px) saturate(0);
         }
 
         .nav__hideNav{

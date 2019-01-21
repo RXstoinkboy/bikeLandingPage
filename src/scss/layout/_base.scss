@@ -23,3 +23,36 @@ html{
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.header__midSection{
+    position: absolute;
+    display: flex;
+    bottom: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-items:center; 
+    flex-flow: column nowrap;
+    overflow: visible;
+}
+
+.features{
+    background: linear-gradient(180deg, rgb(37, 41, 40) 20%, rgb(37, 56, 56) 100%);
+
+    .content{
+        background: rgb(37, 41, 40);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 4em auto;
+        max-width: 910px;
+        width: 97%;
+        flex-flow: row wrap;
+
+        @media all and (max-width: 900px){
+            & {
+                margin: 0 auto;
+            }
+        }
+    }
+}

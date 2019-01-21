@@ -1,0 +1,25 @@
+.header__buttonDown{
+    width: 200px;
+    height: 50px;
+    border-radius: 25px;
+    border: none;
+    margin-top: 10px;
+    background: var(--secondaryTextColor);
+    color: white;
+    font-weight: bold;
+    font-size: 1.3em;
+    transform: translate3d(0, 0, 0);
+    box-shadow: 0 0 1px hsl(0,0%, 10%);
+    transition: all .2s ease;
+    cursor: pointer;
+
+    &:hover{
+        transform: translate3d(0, -3px, 0);
+        box-shadow: 0 3px 3px hsl(0,0%, 20%);
+        filter: brightness(120%);
+    }
+
+    &:focus{
+        outline: none;
+    }
+}

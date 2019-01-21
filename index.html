@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <!-- change when in PROD mode -->
     <link rel="stylesheet" href="./dist/css/main.css">
 </head>
+
 <body>
     <button class="navButton">
         <div class="navButton__top"></div>
@@ -15,39 +17,59 @@
         <div class="navButton__bot"></div>
     </button>
     <header id="header">
-        <nav class="nav" id="nav-bar">    
+        <nav class="nav" id="nav-bar">
             <a href="#" class="nav-link">Home<span></span></a>
             <a href="#" class="nav-link">Features<span></span></a>
             <a href="#" class="nav-link">About item<span></span></a>
             <a href="#" class="nav-link">Contact<span></span></a>
+            <img src="dist/images/bikeLogo_prod.png" alt="bike logo company" class='nav__logo' id="header-img">
         </nav>
-
         <div class="nav__hideNav"></div>
-        
     </header>
 
     <div class="main">
-        <div class="header">            
-                <div class="bikeAnim">wrum!!</div>
+        <div class="header">
+            <div class="bikeAnim">wrum!!</div>
+            <div class="header__midSection">
                 <h1 class="header__hello">Nice bike, <span>huh?!</span></h1>
-                <img class="header__heroImg" src="dist/images/heroBike.png" alt="a bike picture">
+                <button class="header__buttonDown">Want one?</button>
             </div>
-                <section class="features">
-            <div class="content">Some text 1</div>
+            <img class="header__heroImg" src="dist/images/heroBike.png" alt="a bike picture">
+        </div>
+
+        <section class="features">
+            <div class="content">
+                <article class="feature">
+                    <h1 class="feature__title">Premium Materials</h1>
+                    <p class="feature__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse repudiandae unde voluptas adipisci vero animi, accusantium eum eveniet molestias reprehenderit.</p>
+                </article>
+                <article class="feature">
+                    <h1 class="feature__title">Fast Shipping</h1>
+                    <p class="feature__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptates tenetur, veritatis ratione iure ducimus accusamus! Animi quis perspiciatis velit quibusdam.</p>
+                </article>
+                <article class="feature">
+                    <h1 class="feature__title">Quality Assurance</h1>
+                    <p class="feature__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem repudiandae quidem eos modi tenetur velit eum praesentium earum, commodi sequi?</p>
+                </article>
+            </div>
         </section>
 
         <section class="aboutItem">
-            <div class="aboutItemCnt">Some text 2</div>
+            <div class="aboutItemCnt">
+                <article class="aboutItemCnt__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem consequatur quisquam nesciunt veniam amet ut! Voluptatum odit ut, dicta quo unde consequatur error tenetur quasi enim! Est exercitationem, quia animi recusandae, nemo quibusdam placeat nihil architecto distinctio optio, id libero?</article>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/5hgTFSimTP4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="video"></iframe>
+            </div>
         </section>
 
         <section class="contact">
             <div class="formCnt">Some text 3</div>
         </section>
-        
+
     </div>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.min.js"></script>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
     <script type="module" src="./src/js/index.js"></script>
 </body>
+
 </html>

@@ -19,15 +19,7 @@
 
 .features {
   position: relative;
-  width: 100vw;
-  height: 100vh;
-  background: blue fixed; }
-  .features .content {
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    background: grey;
-    margin-top: 200px; }
+  width: 100vw; }
 
 .aboutItem {
   position: relative;
@@ -76,6 +68,32 @@ html {
   background-repeat: no-repeat;
   background-size: cover; }
 
+.header__midSection {
+  position: absolute;
+  display: flex;
+  bottom: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  overflow: visible; }
+
+.features {
+  background: linear-gradient(180deg, #252928 20%, #253838 100%); }
+  .features .content {
+    background: #252928;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 4em auto;
+    max-width: 910px;
+    width: 97%;
+    flex-flow: row wrap; }
+    @media all and (max-width: 900px) {
+      .features .content {
+        margin: 0 auto; } }
+
 .header__heroImg {
   position: absolute;
   max-height: 60%;
@@ -85,10 +103,6 @@ html {
   transform: translateX(-50%); }
 
 .header__hello {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   color: var(--mainTextColor);
   font-family: 'Aleo', serif;
   font-size: 5em;
@@ -202,7 +216,7 @@ html {
 
 .navButton.navButton--active ~ #header ~ .main {
   transform: translate3d(7%, 0, 0);
-  filter: blur(3px) saturate(0.1); }
+  filter: blur(3px) saturate(0); }
 
 .navButton.navButton--active ~ #header .nav__hideNav {
   display: block; }
@@ -214,3 +228,43 @@ html {
   top: 0;
   right: 5%;
   background: red; }
+
+.nav__logo {
+  z-index: 10;
+  height: 80px; }
+
+.header__buttonDown {
+  width: 200px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  margin-top: 10px;
+  background: var(--secondaryTextColor);
+  color: white;
+  font-weight: bold;
+  font-size: 1.3em;
+  transform: translate3d(0, 0, 0);
+  box-shadow: 0 0 1px #1a1a1a;
+  transition: all .2s ease;
+  cursor: pointer; }
+  .header__buttonDown:hover {
+    transform: translate3d(0, -3px, 0);
+    box-shadow: 0 3px 3px #333333;
+    filter: brightness(120%); }
+  .header__buttonDown:focus {
+    outline: none; }
+
+.feature {
+  color: white;
+  margin: 0;
+  padding: 1.5em 1em;
+  max-width: 300px;
+  font-size: 2em; }
+  .feature .feature__title {
+    color: var(--mainTextColor);
+    margin-bottom: 0.5em; }
+  .feature .feature__text {
+    font-size: .8em;
+    border-top: 2px solid var(--mainTextColor);
+    padding-top: .3em;
+    line-height: 1.3em; }

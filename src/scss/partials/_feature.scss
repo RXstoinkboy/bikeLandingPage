@@ -1,0 +1,19 @@
+.feature{
+    color: white;
+    margin: 0;
+    padding: 1.5em 1em;
+    max-width: 300px;
+    font-size: 2em;
+
+    .feature__title{
+        color: var(--mainTextColor);
+        margin-bottom: 0.5em;
+    }
+
+    .feature__text{
+        font-size: .8em;
+        border-top: 2px solid var(--mainTextColor);
+        padding-top: .3em;
+        line-height: 1.3em;
+    }
+}
