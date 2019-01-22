@@ -3,5 +3,4 @@ export function toggleMenu() {
   const nav = document.querySelector('.nav');
 
   navButton.classList.toggle('navButton--active');
-  // nav.classList.toggle('nav--active');
 }

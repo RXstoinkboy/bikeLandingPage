@@ -86,6 +86,33 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/js/dynamicValidation.js":
+/*!*************************************!*\
+  !*** ./src/js/dynamicValidation.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.dynamicValidation = dynamicValidation;
+
+function dynamicValidation() {
+  var input = document.querySelector('input[type=email]');
+
+  if (!input.checkValidity()) {
+    input.classList.add('error');
+  } else {
+    input.classList.remove('error');
+  }
+}
+
+/***/ }),
+
 /***/ "./src/js/index.js":
 /*!*************************!*\
   !*** ./src/js/index.js ***!
@@ -98,9 +125,19 @@
 
 var _navButton = __webpack_require__(/*! ./navButton.js */ "./src/js/navButton.js");
 
+var _dynamicValidation = __webpack_require__(/*! ./dynamicValidation.js */ "./src/js/dynamicValidation.js");
+
+var _scrollToContact = __webpack_require__(/*! ./scrollToContact.js */ "./src/js/scrollToContact.js");
+
 window.addEventListener('DOMContentLoaded', function () {
   var navButton = document.querySelector('.navButton');
   var hideNav = document.querySelector('.nav__hideNav');
+  var input = document.querySelector('input[type=email]');
+  var form = document.querySelector('form');
+  var mainButton = document.querySelector('.header__buttonDown');
+  form.setAttribute('novalidate', true);
+  mainButton.addEventListener('click', _scrollToContact.scrollToSection);
+  input.addEventListener('input', _dynamicValidation.dynamicValidation);
   navButton.addEventListener('click', _navButton.toggleMenu);
   hideNav.addEventListener('click', _navButton.toggleMenu);
 });
@@ -125,7 +162,33 @@ exports.toggleMenu = toggleMenu;
 function toggleMenu() {
   var navButton = document.querySelector('.navButton');
   var nav = document.querySelector('.nav');
-  navButton.classList.toggle('navButton--active'); // nav.classList.toggle('nav--active');
+  navButton.classList.toggle('navButton--active');
+}
+
+/***/ }),
+
+/***/ "./src/js/scrollToContact.js":
+/*!***********************************!*\
+  !*** ./src/js/scrollToContact.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.scrollToSection = scrollToSection;
+
+function scrollToSection() {
+  var contact = document.querySelector('.contact');
+  contact.scrollIntoView({
+    behavior: 'smooth',
+    block: 'end'
+  });
+  console.log('scroll');
 }
 
 /***/ })

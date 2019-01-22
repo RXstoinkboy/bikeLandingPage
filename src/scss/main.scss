@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Aleo|Lato&subset=latin-ext');
 @import './variables/variables';
-@import './partials/mixins';
+@import './variables/mixins';
 @import './layout/grid';
 @import './layout/base';
 @import './partials/heroImg';
 @import './partials/headerHello';
 @import './partials/nav';
-@import './partials/bikeAnim';
 @import './partials/bikeImg';
 @import './partials/headerButton';
 @import './partials/feature';
 @import './partials/about';
 @import './partials/form';
+@import './partials/error';

@@ -15,6 +15,10 @@
     font-size: 1rem;
     padding: 1rem;
     border-radius: 2rem 0 0 2rem;
+
+    &:focus{
+        outline: none;
+    }
 }
 
 .formCnt__button{
