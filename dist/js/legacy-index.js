@@ -135,7 +135,11 @@ window.addEventListener('DOMContentLoaded', function () {
   var input = document.querySelector('input[type=email]');
   var form = document.querySelector('form');
   var mainButton = document.querySelector('.header__buttonDown');
+  var bikeImg = document.querySelector('.header__heroImg');
+  var headerTexts = document.querySelector('.header__midSection');
   form.setAttribute('novalidate', true);
+  bikeImg.classList.add('header__heroImg--active');
+  headerTexts.classList.add('header__midSection--active');
   mainButton.addEventListener('click', _scrollToContact.scrollToSection);
   input.addEventListener('input', _dynamicValidation.dynamicValidation);
   navButton.addEventListener('click', _navButton.toggleMenu);
