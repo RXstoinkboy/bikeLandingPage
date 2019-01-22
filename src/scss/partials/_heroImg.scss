@@ -5,8 +5,9 @@
     bottom: 0;
     opacity: 0;
     left: 50%;
-    transform: translateX(-50%) translateY(10px) scale(.97);
+    transform: translateX(-50%) translateY(20px) scale(.98);
     transition: all 1s ease-in-out;
+    transition-delay: .3s;
 
     @media all and (max-height:450px){
         left: 100%;
