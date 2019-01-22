@@ -1,5 +1,7 @@
 # Bike Landing Page
-It is a landing page for selling a bike. Website is prepared for FCC RWD certification. I am making using mostly SASS and vanilla JS. 
+It is a landing page for selling a bike. Website is prepared for FCC RWD certification. Made using SASS and vanilla JS. 
+
+Burger menu in this project is quite good. It was inspired by project found on web, but built on my own.
 
 ## Usage
 These are instructions needed for you in order to download this repo and run it on your local machine.
@@ -14,12 +16,12 @@ In order to run this repository and modify it you need [**NodeJS**][1] and **npm
     git clone https://github.com/RXstoinkboy/devConfiguration.git
     ```
 
-1. Install all dependencies used for building this project:
+2. Install all dependencies used for building this project:
     ```
     npm install
     ```
 
-1. npm scripts - used most frequently
+3. npm scripts - used most frequently
       + to run your local server and watch app updating live
         ```
         npm start
@@ -29,9 +31,9 @@ In order to run this repository and modify it you need [**NodeJS**][1] and **npm
         npm run watch
         ```
 
-1. Go ahead and add files to this repo and build you app upon this set of dependencies.
+4. Go ahead and add files to this repo and build you app upon this set of dependencies.
 
-1. Feel free to modify the code and see he changes updated live in your browser. 
+5. Feel free to modify the code and see he changes updated live in your browser. 
 
 ## Technology
 1. npm scripts - for automating work
