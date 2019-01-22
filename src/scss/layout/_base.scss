@@ -11,14 +11,8 @@ html{
 }
 
 .header{
-    background: url('../../../dist/images/topBg2_light.jpg') fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.contact{
-    background: url('../../../dist/images/bottomBg2_light.jpg') fixed;
+    background: url('../../../dist/images/topBg2_light.jpg');
+    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -27,27 +21,31 @@ html{
 .header__midSection{
     position: absolute;
     display: flex;
-    bottom: 55%;
+    bottom: 55vh;
     left: 50%;
     transform: translate(-50%, -50%);
     justify-content: center;
     align-items:center; 
     flex-flow: column nowrap;
     overflow: visible;
+
+    @media all and (max-width: 450px){
+            bottom: 50%;
+            transform: translate(-50%, 0);
+    }
+    @media all and (max-height: 450px){
+        left: 3%;
+        top: 50%;
+        bottom: 0;
+        transform: translate(0, -50%);
+}
 }
 
 .features{
     background: linear-gradient(180deg, rgb(37, 41, 40) 20%, rgb(37, 56, 56) 100%);
 
     .content{
-        background: rgb(37, 41, 40);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 4em auto;
-        max-width: 910px;
-        width: 97%;
-        flex-flow: row wrap;
+        @extend %sectionCnt;
 
         @media all and (max-width: 900px){
             & {
@@ -55,4 +53,38 @@ html{
             }
         }
     }
+}
+
+.aboutItem{
+    background: linear-gradient(180deg, rgb(37, 56, 56) 0%, rgb(37, 41, 40) 80%);
+
+    .aboutItemCnt{
+        @extend %sectionCnt;
+
+        @media all and (max-width: 900px){
+            & {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+.contact{
+    background: url('../../../dist/images/bottomBg2_light.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+}
+
+.formCnt{
+    display: flex;
+    align-content: center;
+    flex-flow: row nowrap;
 }

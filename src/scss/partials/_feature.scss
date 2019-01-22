@@ -1,19 +1,35 @@
 .feature{
-    color: white;
-    margin: 0;
-    padding: 1.5em 1em;
-    max-width: 300px;
-    font-size: 2em;
+    @extend %content;
+    font-size: 2rem;
 
     .feature__title{
         color: var(--mainTextColor);
-        margin-bottom: 0.5em;
+        margin-bottom: 0.5rem;
     }
 
     .feature__text{
-        font-size: .8em;
+        font-size: 1.3rem;
         border-top: 2px solid var(--mainTextColor);
         padding-top: .3em;
-        line-height: 1.3em;
+        line-height: 1.7rem;
+
+        @media all and (max-width: 380px){
+            padding-top: 10px;
+        }
+    }
+
+    @media all and (max-width: 420px){
+        &{
+            max-width: 100%;
+        }
+    }
+
+    @media all and (max-width: 380px){
+        font-size: 1.5rem;
+    }
+
+    @media all and (max-height: 450px){
+        font-size: 1.3rem;
+        max-width: auto;
     }
 }

@@ -1,0 +1,20 @@
+.aboutItemCnt{
+    @extend %content;
+    display: flex;
+    flex-flow: column nowrap;
+    overflow: visible;
+
+    .aboutItemCnt__text{
+        padding-top: 1rem;
+        margin-bottom: 0.5em;
+        line-height: 1.7rem;
+        border-top: 3px solid var(--mainTextColor);
+    }
+
+    iframe{
+        margin: 3rem 0;
+        width: 100%;
+        min-height: 400px;
+    }
+}
+

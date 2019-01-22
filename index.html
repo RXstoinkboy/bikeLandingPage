@@ -18,10 +18,10 @@
     </button>
     <header id="header">
         <nav class="nav" id="nav-bar">
-            <a href="#" class="nav-link">Home<span></span></a>
-            <a href="#" class="nav-link">Features<span></span></a>
-            <a href="#" class="nav-link">About item<span></span></a>
-            <a href="#" class="nav-link">Contact<span></span></a>
+            <a href="#header" class="nav-link">Home<span></span></a>
+            <a href="#features" class="nav-link">Features<span></span></a>
+            <a href="#aboutItem" class="nav-link">About item<span></span></a>
+            <a href="#contact" class="nav-link">Contact<span></span></a>
             <img src="dist/images/bikeLogo_prod.png" alt="bike logo company" class='nav__logo' id="header-img">
         </nav>
         <div class="nav__hideNav"></div>
@@ -31,13 +31,13 @@
         <div class="header">
             <div class="bikeAnim">wrum!!</div>
             <div class="header__midSection">
-                <h1 class="header__hello">Nice bike, <span>huh?!</span></h1>
-                <button class="header__buttonDown">Want one?</button>
+                <h1 class="header__hello">Looking for a new <span>bike?</span></h1>
+                <button class="header__buttonDown">Sign up to get one</button>
             </div>
             <img class="header__heroImg" src="dist/images/heroBike.png" alt="a bike picture">
         </div>
 
-        <section class="features">
+        <section class="features" id="features">
             <div class="content">
                 <article class="feature">
                     <h1 class="feature__title">Premium Materials</h1>
@@ -54,15 +54,21 @@
             </div>
         </section>
 
-        <section class="aboutItem">
+        <section class="aboutItem" id="aboutItem">
             <div class="aboutItemCnt">
                 <article class="aboutItemCnt__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem consequatur quisquam nesciunt veniam amet ut! Voluptatum odit ut, dicta quo unde consequatur error tenetur quasi enim! Est exercitationem, quia animi recusandae, nemo quibusdam placeat nihil architecto distinctio optio, id libero?</article>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/5hgTFSimTP4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="video"></iframe>
+                <iframe src="https://www.youtube.com/embed/5hgTFSimTP4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen id="video"></iframe>
             </div>
         </section>
 
-        <section class="contact">
-            <div class="formCnt">Some text 3</div>
+        <section class="contact" id="contact">
+                <span class="formCnt__text">
+                    Sign up to get one        
+                </span>
+            <form action="https://www.freecodecamp.com/email-submit" class="formCnt" id="form">
+                <input type="email" name="email" id="email" placeholder="example@example.xyz" class="formCnt__input" pattern="[^@\s]+@[^@\s]+\.[^@\s]+">
+                <input type="submit" name="submit" value=">" class="formCnt__button" id="submit">
+            </form>
         </section>
 
     </div>
