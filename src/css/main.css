@@ -80,7 +80,8 @@ html {
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  will-change: transform; }
 
 .header__midSection {
   position: absolute;
