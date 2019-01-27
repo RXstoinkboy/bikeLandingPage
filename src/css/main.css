@@ -104,11 +104,15 @@ html {
       left: 3%;
       top: 50%;
       bottom: 0;
-      transform: translate(0, -50%); } }
+      transform: translate(0, -60%); } }
 
 .header__midSection--active {
   transform: translate(-50%, -50%) scale(1);
   opacity: 1; }
+  @media all and (max-height: 450px) {
+    .header__midSection--active {
+      transform: translate(0, -50%) scale(1);
+      opacity: 1; } }
 
 .features {
   background: linear-gradient(180deg, #252928 20%, #253838 100%); }
@@ -159,6 +163,10 @@ html {
 .header__heroImg--active {
   transform: translateX(-50%) translateY(0) scale(1);
   opacity: 1; }
+  @media all and (max-height: 450px) {
+    .header__heroImg--active {
+      transform: translateX(-100%) translateY(0) scale(1);
+      opacity: 1; } }
 
 .header__hello {
   color: var(--mainTextColor);

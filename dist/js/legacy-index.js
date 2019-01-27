@@ -192,7 +192,6 @@ function scrollToSection() {
     behavior: 'smooth',
     block: 'end'
   });
-  console.log('scroll');
 }
 
 /***/ })
